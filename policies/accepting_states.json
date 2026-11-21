@@ -1,0 +1,162 @@
+{
+ "unlock(front_door)": {
+  "lease": {
+   "issuer": "root_agent",
+   "grantee": "manager_agent",
+   "scope": [
+    "unlock(front_door)"
+   ],
+   "base_commit": "c41"
+  },
+  "current_commit": "c41",
+  "presence_source": "button",
+  "presence_observed_at": {
+   "$age": 5
+  },
+  "deny_mode": "none",
+  "garage": {
+   "vehicle_door": "closed"
+  },
+  "night_mode": false,
+  "alarm": {
+   "ack_source": "button",
+   "ack_observed_at": {
+    "$age": 5
+   },
+   "state": "armed"
+  },
+  "camera": {
+   "privacy_request": [
+    "resident"
+   ]
+  }
+ },
+ "unlock(garage_entry)": {
+  "lease": {
+   "issuer": "root_agent",
+   "grantee": "manager_agent",
+   "scope": [
+    "unlock(garage_entry)"
+   ],
+   "base_commit": "c41"
+  },
+  "current_commit": "c41",
+  "presence_source": "button",
+  "presence_observed_at": {
+   "$age": 5
+  },
+  "deny_mode": "none",
+  "garage": {
+   "vehicle_door": "closed"
+  },
+  "night_mode": false,
+  "alarm": {
+   "ack_source": "button",
+   "ack_observed_at": {
+    "$age": 5
+   },
+   "state": "armed"
+  },
+  "camera": {
+   "privacy_request": [
+    "resident"
+   ]
+  }
+ },
+ "unlock(night_lock)": {
+  "lease": {
+   "issuer": "root_agent",
+   "grantee": "manager_agent",
+   "scope": [
+    "unlock(night_lock)"
+   ],
+   "base_commit": "c41"
+  },
+  "current_commit": "c41",
+  "presence_source": "button",
+  "presence_observed_at": {
+   "$age": 5
+  },
+  "deny_mode": "none",
+  "garage": {
+   "vehicle_door": "closed"
+  },
+  "night_mode": false,
+  "alarm": {
+   "ack_source": "button",
+   "ack_observed_at": {
+    "$age": 5
+   },
+   "state": "armed"
+  },
+  "camera": {
+   "privacy_request": [
+    "resident"
+   ]
+  }
+ },
+ "siren_off(living_room)": {
+  "lease": {
+   "issuer": "root_agent",
+   "grantee": "manager_agent",
+   "scope": [
+    "siren_off(living_room)"
+   ],
+   "base_commit": "c41"
+  },
+  "current_commit": "c41",
+  "presence_source": "button",
+  "presence_observed_at": {
+   "$age": 5
+  },
+  "deny_mode": "none",
+  "garage": {
+   "vehicle_door": "closed"
+  },
+  "night_mode": false,
+  "alarm": {
+   "ack_source": "button",
+   "ack_observed_at": {
+    "$age": 5
+   },
+   "state": "armed"
+  },
+  "camera": {
+   "privacy_request": [
+    "resident"
+   ]
+  }
+ },
+ "disable_recording(living_room_camera)": {
+  "lease": {
+   "issuer": "root_agent",
+   "grantee": "manager_agent",
+   "scope": [
+    "disable_recording(living_room_camera)"
+   ],
+   "base_commit": "c41"
+  },
+  "current_commit": "c41",
+  "presence_source": "button",
+  "presence_observed_at": {
+   "$age": 5
+  },
+  "deny_mode": "none",
+  "garage": {
+   "vehicle_door": "closed"
+  },
+  "night_mode": false,
+  "alarm": {
+   "ack_source": "button",
+   "ack_observed_at": {
+    "$age": 5
+   },
+   "state": "armed"
+  },
+  "camera": {
+   "privacy_request": [
+    "resident"
+   ]
+  }
+ }
+}

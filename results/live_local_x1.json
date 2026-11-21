@@ -1,0 +1,182 @@
+{
+ "label": "local",
+ "scale": 1,
+ "publisher_host_role": "local",
+ "python": "3.12.3",
+ "started": 1795201908.4623375,
+ "full": {
+  "per_variant": {
+   "stale presence": {
+    "n": 12,
+    "admitted": 0
+   },
+   "missing presence source": {
+    "n": 12,
+    "admitted": 0
+   },
+   "wrong-grantee lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 12,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 60,
+  "benign_n": 60,
+  "reason_ids": {
+   "stale presence": {
+    "G6": 12
+   },
+   "missing presence source": {
+    "G5": 12
+   },
+   "wrong-grantee lease": {
+    "G2": 12
+   },
+   "expired lease": {
+    "G4": 12
+   },
+   "lease-scope mismatch": {
+    "G3": 12
+   }
+  },
+  "attack_n": 60,
+  "attack_admitted": 0,
+  "latency_us": {
+   "n": 120,
+   "median": 1089.6305,
+   "p95": 1806.125,
+   "p99": 2647.138,
+   "max": 2810.982
+  },
+  "guard_internal_us": {
+   "n": 120,
+   "median": 494.299,
+   "p95": 661.728,
+   "p99": 993.496,
+   "max": 1878.366
+  },
+  "state_read_us": {
+   "n": 120,
+   "median": 433.6965,
+   "p95": 556.909,
+   "p99": 912.864,
+   "max": 1812.595
+  },
+  "evaluate_us": {
+   "n": 120,
+   "median": 38.147999999999996,
+   "p95": 44.384,
+   "p99": 59.457,
+   "max": 220.416
+  }
+ },
+ "lo": {
+  "per_variant": {
+   "stale presence": {
+    "n": 12,
+    "admitted": 12
+   },
+   "missing presence source": {
+    "n": 12,
+    "admitted": 12
+   },
+   "wrong-grantee lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 12,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 60,
+  "benign_n": 60,
+  "reason_ids": {
+   "wrong-grantee lease": {
+    "G2": 12
+   },
+   "expired lease": {
+    "G4": 12
+   },
+   "lease-scope mismatch": {
+    "G3": 12
+   }
+  },
+  "attack_n": 60,
+  "attack_admitted": 24,
+  "latency_us": {
+   "n": 120,
+   "median": 969.277,
+   "p95": 1224.51,
+   "p99": 1646.073,
+   "max": 1865.385
+  },
+  "guard_internal_us": {
+   "n": 120,
+   "median": 434.3525,
+   "p95": 547.118,
+   "p99": 668.478,
+   "max": 731.721
+  },
+  "state_read_us": {
+   "n": 120,
+   "median": 394.1895,
+   "p95": 501.616,
+   "p99": 623.723,
+   "max": 685.453
+  },
+  "evaluate_us": {
+   "n": 120,
+   "median": 20.063499999999998,
+   "p95": 23.391,
+   "p99": 27.157,
+   "max": 37.655
+  }
+ },
+ "probes": {
+  "payload_sender_spoof": {
+   "allow": false,
+   "failed": [
+    [
+     "identity",
+     "sender_id 'root_agent' does not match connection identity 'manager_agent'"
+    ]
+   ]
+  },
+  "unpoliced_action": {
+   "allow": false,
+   "failed": [
+    [
+     "policy",
+     "no policy for 'unlock(back_door)': default deny"
+    ]
+   ]
+  },
+  "non_command_type": {
+   "allow": false,
+   "failed": [
+    [
+     "envelope",
+     "only command envelopes may actuate"
+    ]
+   ]
+  },
+  "broker_permission_violations": {
+   "attempted": 4,
+   "refused": 4
+  },
+  "still_accepting_after_refused_writes": true
+ },
+ "finished": 1795201909.5752764
+}

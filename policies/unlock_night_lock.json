@@ -1,0 +1,59 @@
+{
+ "action": "unlock(night_lock)",
+ "guards": [
+  {
+   "id": "G1",
+   "field": "state.lease.issuer",
+   "op": "eq",
+   "value": "root_agent"
+  },
+  {
+   "id": "G2",
+   "field": "state.lease.grantee",
+   "op": "eq_field",
+   "other_field": "envelope.sender_id"
+  },
+  {
+   "id": "G3",
+   "field": "state.lease.scope",
+   "op": "includes",
+   "value": "unlock(night_lock)"
+  },
+  {
+   "id": "G4",
+   "field": "state.lease.base_commit",
+   "op": "eq_field",
+   "other_field": "state.current_commit"
+  },
+  {
+   "id": "G5",
+   "field": "state.presence_source",
+   "op": "eq",
+   "value": "button"
+  },
+  {
+   "id": "G6",
+   "field": "state.presence_observed_at",
+   "op": "fresher_than",
+   "duration_sec": 15
+  },
+  {
+   "id": "G7",
+   "field": "state.night_mode",
+   "op": "neq",
+   "value": true
+  }
+ ],
+ "deny": [
+  {
+   "id": "D1",
+   "field": "state.deny_mode",
+   "op": "in",
+   "values": [
+    "vacation",
+    "lockdown",
+    "away"
+   ]
+  }
+ ]
+}

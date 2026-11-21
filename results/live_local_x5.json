@@ -1,0 +1,115 @@
+{
+ "label": "local",
+ "scale": 5,
+ "publisher_host_role": "local",
+ "python": "3.12.3",
+ "started": 1795201923.4237854,
+ "full": {
+  "per_variant": {
+   "stale presence": {
+    "n": 60,
+    "admitted": 0
+   },
+   "missing presence source": {
+    "n": 60,
+    "admitted": 0
+   },
+   "wrong-grantee lease": {
+    "n": 60,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 60,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 60,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 300,
+  "benign_n": 300,
+  "reason_ids": {
+   "stale presence": {
+    "G6": 60
+   },
+   "missing presence source": {
+    "G5": 60
+   },
+   "wrong-grantee lease": {
+    "G2": 60
+   },
+   "expired lease": {
+    "G4": 60
+   },
+   "lease-scope mismatch": {
+    "G3": 60
+   }
+  },
+  "attack_n": 300,
+  "attack_admitted": 0,
+  "latency_us": {
+   "n": 600,
+   "median": 975.9580000000001,
+   "p95": 1298.04,
+   "p99": 1449.887,
+   "max": 3233.782
+  },
+  "guard_internal_us": {
+   "n": 600,
+   "median": 445.69,
+   "p95": 570.299,
+   "p99": 720.349,
+   "max": 1121.806
+  },
+  "state_read_us": {
+   "n": 600,
+   "median": 390.0015,
+   "p95": 505.155,
+   "p99": 656.987,
+   "max": 1062.852
+  },
+  "evaluate_us": {
+   "n": 600,
+   "median": 35.338,
+   "p95": 43.636,
+   "p99": 58.65,
+   "max": 224.293
+  }
+ },
+ "probes": {
+  "payload_sender_spoof": {
+   "allow": false,
+   "failed": [
+    [
+     "identity",
+     "sender_id 'root_agent' does not match connection identity 'manager_agent'"
+    ]
+   ]
+  },
+  "unpoliced_action": {
+   "allow": false,
+   "failed": [
+    [
+     "policy",
+     "no policy for 'unlock(back_door)': default deny"
+    ]
+   ]
+  },
+  "non_command_type": {
+   "allow": false,
+   "failed": [
+    [
+     "envelope",
+     "only command envelopes may actuate"
+    ]
+   ]
+  },
+  "broker_permission_violations": {
+   "attempted": 4,
+   "refused": 4
+  },
+  "still_accepting_after_refused_writes": true
+ },
+ "finished": 1795201925.1802385
+}

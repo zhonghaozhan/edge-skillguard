@@ -1,0 +1,115 @@
+{
+ "label": "crosshost",
+ "scale": 5,
+ "publisher_host_role": "crosshost",
+ "python": "3.14.4",
+ "started": 1795201955.501209,
+ "full": {
+  "per_variant": {
+   "stale presence": {
+    "n": 60,
+    "admitted": 0
+   },
+   "missing presence source": {
+    "n": 60,
+    "admitted": 0
+   },
+   "wrong-grantee lease": {
+    "n": 60,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 60,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 60,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 300,
+  "benign_n": 300,
+  "reason_ids": {
+   "stale presence": {
+    "G6": 60
+   },
+   "missing presence source": {
+    "G5": 60
+   },
+   "wrong-grantee lease": {
+    "G2": 60
+   },
+   "expired lease": {
+    "G4": 60
+   },
+   "lease-scope mismatch": {
+    "G3": 60
+   }
+  },
+  "attack_n": 300,
+  "attack_admitted": 0,
+  "latency_us": {
+   "n": 600,
+   "median": 1242.471,
+   "p95": 1551.779,
+   "p99": 1729.093,
+   "max": 1934.41
+  },
+  "guard_internal_us": {
+   "n": 600,
+   "median": 476.126,
+   "p95": 612.055,
+   "p99": 720.641,
+   "max": 983.124
+  },
+  "state_read_us": {
+   "n": 600,
+   "median": 419.2125,
+   "p95": 549.506,
+   "p99": 660.178,
+   "max": 926.536
+  },
+  "evaluate_us": {
+   "n": 600,
+   "median": 36.189,
+   "p95": 42.555,
+   "p99": 53.635,
+   "max": 68.833
+  }
+ },
+ "probes": {
+  "payload_sender_spoof": {
+   "allow": false,
+   "failed": [
+    [
+     "identity",
+     "sender_id 'root_agent' does not match connection identity 'manager_agent'"
+    ]
+   ]
+  },
+  "unpoliced_action": {
+   "allow": false,
+   "failed": [
+    [
+     "policy",
+     "no policy for 'unlock(back_door)': default deny"
+    ]
+   ]
+  },
+  "non_command_type": {
+   "allow": false,
+   "failed": [
+    [
+     "envelope",
+     "only command envelopes may actuate"
+    ]
+   ]
+  },
+  "broker_permission_violations": {
+   "attempted": 4,
+   "refused": 4
+  },
+  "still_accepting_after_refused_writes": true
+ },
+ "finished": 1795201957.5440183
+}

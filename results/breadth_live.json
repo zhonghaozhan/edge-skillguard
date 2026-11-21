@@ -1,0 +1,49 @@
+{
+ "policies": 5,
+ "requests": 832,
+ "by_kind": {
+  "single": {
+   "n": 182,
+   "admitted": 0
+  },
+  "combo": {
+   "n": 500,
+   "admitted": 0
+  },
+  "benign": {
+   "n": 150,
+   "admitted": 150
+  }
+ },
+ "by_policy": {
+  "disable_recording(living_room_camera)": {
+   "n": 171,
+   "admitted": 30
+  },
+  "siren_off(living_room)": {
+   "n": 164,
+   "admitted": 30
+  },
+  "unlock(front_door)": {
+   "n": 163,
+   "admitted": 30
+  },
+  "unlock(garage_entry)": {
+   "n": 168,
+   "admitted": 30
+  },
+  "unlock(night_lock)": {
+   "n": 166,
+   "admitted": 30
+  }
+ },
+ "wrong_decision": 0,
+ "wrong_reason_set": 0,
+ "latency_us": {
+  "n": 832,
+  "median": 1005.808,
+  "p95": 1274.593,
+  "p99": 1626.473,
+  "max": 3160.335
+ }
+}

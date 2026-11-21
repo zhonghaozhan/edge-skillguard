@@ -1,0 +1,12 @@
+# Isolated test broker for the live runs. Identity is attested by the broker:
+# an agent may publish requests only on the subject that carries its own name,
+# and the guard takes the sender from that subject, never from the payload.
+port: 4222
+jetstream { store_dir: "/tmp/esg_js", max_mem: 256M, max_file: 1G }
+authorization {
+  users = [
+    { user: guard,        password: "__PW_GUARD__", permissions: { publish: ">", subscribe: ">" } }
+    { user: experimenter, password: "__PW_EXP__",   permissions: { publish: [ "test.skillguard.ctl.>" ], subscribe: [ "_INBOX.>", "test.skillguard.>" ] } }
+    { user: manager_agent, password: "__PW_MGR__",  permissions: { publish: [ "test.skillguard.*.req.manager_agent" ], subscribe: [ "_INBOX.>" ] } }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+ "label": "crosshost",
+ "scale": 1,
+ "publisher_host_role": "crosshost",
+ "python": "3.14.4",
+ "started": 1795201944.7333987,
+ "full": {
+  "per_variant": {
+   "stale presence": {
+    "n": 12,
+    "admitted": 0
+   },
+   "missing presence source": {
+    "n": 12,
+    "admitted": 0
+   },
+   "wrong-grantee lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 12,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 60,
+  "benign_n": 60,
+  "reason_ids": {
+   "stale presence": {
+    "G6": 12
+   },
+   "missing presence source": {
+    "G5": 12
+   },
+   "wrong-grantee lease": {
+    "G2": 12
+   },
+   "expired lease": {
+    "G4": 12
+   },
+   "lease-scope mismatch": {
+    "G3": 12
+   }
+  },
+  "attack_n": 60,
+  "attack_admitted": 0,
+  "latency_us": {
+   "n": 120,
+   "median": 1258.15,
+   "p95": 1546.171,
+   "p99": 1962.635,
+   "max": 2006.873
+  },
+  "guard_internal_us": {
+   "n": 120,
+   "median": 482.37149999999997,
+   "p95": 615.856,
+   "p99": 827.177,
+   "max": 1068.162
+  },
+  "state_read_us": {
+   "n": 120,
+   "median": 425.2585,
+   "p95": 547.694,
+   "p99": 761.094,
+   "max": 1004.317
+  },
+  "evaluate_us": {
+   "n": 120,
+   "median": 36.332,
+   "p95": 42.47,
+   "p99": 46.196,
+   "max": 46.786
+  }
+ },
+ "lo": {
+  "per_variant": {
+   "stale presence": {
+    "n": 12,
+    "admitted": 12
+   },
+   "missing presence source": {
+    "n": 12,
+    "admitted": 12
+   },
+   "wrong-grantee lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "expired lease": {
+    "n": 12,
+    "admitted": 0
+   },
+   "lease-scope mismatch": {
+    "n": 12,
+    "admitted": 0
+   }
+  },
+  "benign_admitted": 60,
+  "benign_n": 60,
+  "reason_ids": {
+   "wrong-grantee lease": {
+    "G2": 12
+   },
+   "expired lease": {
+    "G4": 12
+   },
+   "lease-scope mismatch": {
+    "G3": 12
+   }
+  },
+  "attack_n": 60,
+  "attack_admitted": 24,
+  "latency_us": {
+   "n": 120,
+   "median": 1216.741,
+   "p95": 1436.151,
+   "p99": 1530.807,
+   "max": 1781.314
+  },
+  "guard_internal_us": {
+   "n": 120,
+   "median": 451.27,
+   "p95": 578.275,
+   "p99": 676.415,
+   "max": 769.534
+  },
+  "state_read_us": {
+   "n": 120,
+   "median": 407.608,
+   "p95": 516.335,
+   "p99": 623.034,
+   "max": 718.763
+  },
+  "evaluate_us": {
+   "n": 120,
+   "median": 20.4905,
+   "p95": 23.345,
+   "p99": 51.924,
+   "max": 225.269
+  }
+ },
+ "probes": {
+  "payload_sender_spoof": {
+   "allow": false,
+   "failed": [
+    [
+     "identity",
+     "sender_id 'root_agent' does not match connection identity 'manager_agent'"
+    ]
+   ]
+  },
+  "unpoliced_action": {
+   "allow": false,
+   "failed": [
+    [
+     "policy",
+     "no policy for 'unlock(back_door)': default deny"
+    ]
+   ]
+  },
+  "non_command_type": {
+   "allow": false,
+   "failed": [
+    [
+     "envelope",
+     "only command envelopes may actuate"
+    ]
+   ]
+  },
+  "broker_permission_violations": {
+   "attempted": 4,
+   "refused": 4
+  },
+  "still_accepting_after_refused_writes": true
+ },
+ "finished": 1795201945.9227445
+}

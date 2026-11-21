@@ -1,0 +1,70 @@
+{
+  "workload": {
+    "per_variant": {
+      "stale presence": {
+        "ESG-LO": 12,
+        "ESG": 0
+      },
+      "missing presence source": {
+        "ESG-LO": 12,
+        "ESG": 0
+      },
+      "wrong-grantee lease": {
+        "ESG-LO": 0,
+        "ESG": 0
+      },
+      "expired lease": {
+        "ESG-LO": 0,
+        "ESG": 0
+      },
+      "lease-scope mismatch": {
+        "ESG-LO": 0,
+        "ESG": 0
+      }
+    },
+    "benign": {
+      "ESG-LO": 60,
+      "ESG": 60
+    },
+    "attack_total": {
+      "ESG-LO": 24,
+      "ESG": 0
+    }
+  },
+  "grid": {
+    "states": 378000,
+    "accepting_states": 54,
+    "rejecting_states": 377946,
+    "violation_subsets": 127,
+    "wrong_decision": 0,
+    "wrong_reason_set": 0
+  },
+  "payload_claims": {
+    "pairs": 192,
+    "changed": 0
+  },
+  "fuzz": {
+    "trials": 200000,
+    "disagree": 0,
+    "admitted": 53990
+  },
+  "type_confusion": {
+    "cases": 9,
+    "admitted": 0
+  },
+  "policy_load": {
+    "malformed": 10,
+    "rejected": 10
+  },
+  "policy_update": {
+    "loosenings": 125,
+    "loosenings_flagged": 125,
+    "tightenings": 7,
+    "tightenings_passed": 7,
+    "newly_admitted_after_tightening": 0,
+    "op_tightenings": 9,
+    "op_tightenings_passed": 9,
+    "op_loosenings": 15,
+    "op_loosenings_flagged": 15
+  }
+}
