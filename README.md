@@ -3,7 +3,7 @@
 Code, policies, workloads and raw results for the paper
 
 > **Auto-Policy, not Auto-Skill: Compiled Agent Skills for the Physical World**
-> Zhonghao Zhan and Hamed Haddadi. [arXiv:2608.25091](https://arxiv.org/abs/2608.25091)
+> Zhonghao Zhan, Krinos Li, Yefan Zhang and Hamed Haddadi. [arXiv:2608.25091](https://arxiv.org/abs/2608.25091)
 
 Edge Skillguard is a typed invocation policy for agent Skills that drive
 physical devices. A policy lists guards that must all hold and deny conditions
@@ -89,7 +89,7 @@ configuration per call; runs are resumable:
 
     @article{zhan2026autopolicy,
       title   = {Auto-Policy, not Auto-Skill: Compiled Agent Skills for the Physical World},
-      author  = {Zhan, Zhonghao and Haddadi, Hamed},
+      author  = {Zhan, Zhonghao and Li, Krinos and Zhang, Yefan and Haddadi, Hamed},
       journal = {arXiv preprint arXiv:2608.25091},
       year    = {2026}
     }
